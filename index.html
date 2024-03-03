@@ -1,1 +1,134 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        .container {
+            width: 350px;
+            height: 500px;
+            perspective: 800px;
+        }
+
+        .container:hover > .card {
+            cursor: pointer;
+            transform: rotateY(180deg);
+        }
+
+        .card {
+            height: 10%;
+            width: 10%;
+            position: relative;
+            transition: transform 1500ms;
+            transform-style: preserve-3d;
+        }
+
+        .front,
+        .back {
+            height: 100%;
+            width: 100%;
+            border-radius: 2rem;
+            box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        .front{
+            background-image: url(me.jpeg);
+        }
+        .back{
+            background-image: linear-gradient(to right top, #4712de, #820093, #7e0057, #640030, #41161c);
+            color: white;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#summary" class="nav-link px-2 text-white">Summary</a></li>
+                    <li><a href="#education" class="nav-link px-2 text-white">Education</a></li>
+                    <li><a href="#skills" class="nav-link px-2 text-white">Skills</a></li>
+                    <li><a href="#projects" class="nav-link px-2 text-white">Projects</a></li>
+                    <li><a href="#resume" class="nav-link px-2 text-white">Resume</a></li>
+                    <li><a href="#contact" class="nav-link px-2 text-white">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <section id="summary" class="mb-4">
+            <div class="container">
+                <div class="card">
+                    <div class="front">
+                    </div>
+                    <div class="back">
+                        <h1>Back of Card</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="mb-4">
+            <h2>Education</h2>
+            <p>Your education details go here.</p>
+        </section>
+
+        <section id="skills" class="mb-4">
+            <h2>Skills</h2>
+            <ul class="list-unstyled">
+                <li>Skill 1</li>
+                <li>Skill 2</li>
+                <li>Skill 3</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </section>
+
+        <section id="projects" class="mb-4">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Project 1</h3>
+                            <p class="card-text">Description of project 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Project 2</h3>
+                            <p class="card-text">Description of project 2</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+
+        <section id="resume" class="mb-4">
+            <h2>Resume</h2>
+            <p>Link to your resume goes here.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Your contact details go here.</p>
+        </section>
+    </main>
+
+    <footer class="p-3 bg-dark text-white mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 Your Name</p>
+        </div>
+    </footer>
+</body>
+</html>
