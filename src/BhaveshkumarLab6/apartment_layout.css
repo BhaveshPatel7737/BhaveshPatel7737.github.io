@@ -1,0 +1,93 @@
+body{
+    display: grid;
+    grid-template-columns: auto;
+}
+.cen{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    text-align: center;
+}
+.cen1{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    text-align: center;
+}
+nav ul {
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    padding: 5px;
+    border-left: 1px solid black;
+}
+#licie{
+    border-left: none;
+}
+.navflex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.maingrid{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 0.5fr;
+    gap: 15px;
+}
+
+.fgrid{
+    display: grid;
+    grid-row: auto;
+}
+.maingrid  h1, .flexgrid h1{
+    width: 100%;
+    background-color: rgb(255, 230, 0);
+}
+.lascl{
+    background-color: aquamarine;
+}
+th{
+    text-align: left;
+    background-color: grey;
+}
+table , th , td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+.flexgrid{
+    display: grid;
+    grid-template-columns: auto;
+}
+.flexcls{
+    grid-column: 1 / span 3;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 15px;
+}
+.flexcls h2{
+    background-color: rgb(185, 86, 47);
+    color: white;
+    width: 100%;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.genralcls{
+    display: grid;
+    grid-template-columns: auto;
+}
+.genralcls h1{
+    width: 100%;
+    background-color: rgb(255, 230, 0);
+}
+.cent{
+    text-align:center;
+}

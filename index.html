@@ -3,54 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Bhavesh Patel - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script src="app.js" defer="defer"></script>
     <style>
-        .container {
+        body{
+            background-image: linear-gradient(to right top, #d16b75, #c46585, #b16394, #97639e, #7865a3, #6276b6, #4187c3, #0096c9, #00b9d0, #00d8b6, #86ef87, #f6fb5f);
+            color: white;
+        }
+        .cardcontainer {
             width: 350px;
             height: 500px;
             perspective: 800px;
         }
 
-        .container:hover > .card {
+        .cardcontainer:hover > .card {
             cursor: pointer;
             transform: rotateY(180deg);
         }
 
         .card {
-            height: 10%;
-            width: 10%;
+            height: 100%;
+            width: 100%;
             position: relative;
             transition: transform 1500ms;
             transform-style: preserve-3d;
+            border: none;
+            color: white;
+            background-color: transparent;
         }
-
-        .front,
-        .back {
+        #front img{
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+        }
+        #front,
+        #back {
             height: 100%;
             width: 100%;
             border-radius: 2rem;
             box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
             position: absolute;
-            backface-visibility: hidden;
         }
-        .front{
-            background-image: url(me.jpeg);
-        }
-        .back{
+        #back{
             background-image: linear-gradient(to right top, #4712de, #820093, #7e0057, #640030, #41161c);
             color: white;
+            transform: scale(-1,1);
         }
         
 
     </style>
 </head>
 <body>
-    <header class="p-3 bg-dark text-white">
+    
+    <header class="p-3 bg-dark text-white fixed-top">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="#summary" class="nav-link px-2 text-white">Summary</a></li>
                     <li><a href="#education" class="nav-link px-2 text-white">Education</a></li>
@@ -58,36 +69,47 @@
                     <li><a href="#projects" class="nav-link px-2 text-white">Projects</a></li>
                     <li><a href="#resume" class="nav-link px-2 text-white">Resume</a></li>
                     <li><a href="#contact" class="nav-link px-2 text-white">Contact</a></li>
+                    
                 </ul>
             </div>
         </div>
     </header>
 
-    <main class="container mt-4">
+    <main class="container" style="margin-top: 10%;">
         <section id="summary" class="mb-4">
-            <div class="container">
-                <div class="card">
-                    <div class="front">
+            <div class="cardcontainer">
+                <div class="card" id="card1" onmouseover="myimg()" onmouseout="myinfo()">
+                    <div id="front">
+                        <img src="me.jpeg" alt="me.jpeg">
                     </div>
-                    <div class="back">
-                        <h1>Back of Card</h1>
+                    <div id="back">
+                        <h1>Enthusiastic software developer eager to create meaningful projects.</h1>
+                        
                     </div>
                 </div>
             </div>
+            <p>A passionate learner with a strong background in coding, I'm an aspiring software engineer. Proficient in Python, JavaScript, HTML/CSS, and I'm excited to use these talents in practical projects, committed to producing orderly, productive code and working well in teams. Excited to work on important projects and start a fulfilling career in software development.
+            </p>
         </section>
 
         <section id="education" class="mb-4">
-            <h2>Education</h2>
-            <p>Your education details go here.</p>
+            <h2>Education:</h2>
+            <ul>
+                <li>
+                    <strong>Bachlore in Computer Application</strong>- BPCCS [2017-2020]
+                </li>
+                <li>
+                    <strong>Computer System Technology - Software Support</strong>- Mohawk College [2022-Present]
+                </li>
+            </ul>
         </section>
 
         <section id="skills" class="mb-4">
             <h2>Skills</h2>
             <ul class="list-unstyled">
-                <li>Skill 1</li>
-                <li>Skill 2</li>
-                <li>Skill 3</li>
-                <!-- Add more skills as needed -->
+                <li></li>
+                <li>Java, HTML, CSS, Javascript, C++ etc.</li>
+                <li>Teamwork, Communication Skills.</li>
             </ul>
         </section>
 
@@ -97,16 +119,20 @@
                 <div class="col-md-6 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="card-title">Project 1</h3>
-                            <p class="card-text">Description of project 1</p>
+                            <!-- This project is an assignment that I've submitted in previous semester-->
+                            <h3 class="card-title">Project 1: Dice Rolling </h3>
+                            <p class="card-text">RollOn is a thrilling dice rolling game where you challenge the computer to see who rolls the highest. With vibrant visuals and intuitive controls, test your luck and strategy in this exciting battle of chance!</p>
+                            <a href="/src/RollOn.zip" download="RollOn.zip"><button type="button" class="btn btn-primary">Download</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="card-title">Project 2</h3>
-                            <p class="card-text">Description of project 2</p>
+                            <!-- This project is an assignment that I've submitted in previous semester-->
+                            <h3 class="card-title">Project 2: Sandy and Leslie's Apartment</h3>
+                            <p class="card-text">This project showcases my skills in web development and design through the creation of a visually appealing and functional website for Sandy and Leslie's apartment. Leveraging HTML, CSS, and responsive design techniques such as CSS grid and flexbox, I implemented features like interactive floor plans, navigation, forms, and multimedia elements to enhance user experience. The project demonstrates my ability to transform client requirements into a polished and engaging online presence, highlighting both technical proficiency and attention to detail.</p>
+                            <a href="/src/BhaveshkumarLab6/" ><button type="button" class="btn btn-primary">Visit Site</button></a>
                         </div>
                     </div>
                 </div>
@@ -116,18 +142,30 @@
 
         <section id="resume" class="mb-4">
             <h2>Resume</h2>
-            <p>Link to your resume goes here.</p>
+            <p>Click <a href="/src/Bhavesh Resume.docx" download="Bhavesh_Resume.docx">here</a> to see my resume</p>
         </section>
 
         <section id="contact">
-            <h2>Contact Information</h2>
-            <p>Your contact details go here.</p>
+            <h2>Contact Information</h2> 
+            <form>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="username@example.com">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+            </form>
+            <div class="d-flex" style="float: right;">
+                <a href="http://www.linkedin.com/in/bhaveshkumar-patel-7367a5286" class="me-2"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/BhaveshPatel7737" class="me-2"><i class="bi bi-github"></i></a>
+            </div>
         </section>
     </main>
 
     <footer class="p-3 bg-dark text-white mt-5">
         <div class="container text-center">
-            <p>&copy; 2024 Your Name</p>
+            <p>&copy; 2024 Bhaveshkumar Patel</p>
         </div>
     </footer>
 </body>

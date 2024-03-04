@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bhaveshkumar Patel, 000873740 -->
+    <link rel="stylesheet" href="apartment_layout.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mobile.css">
+    <title>Sandy and Leslie's Apartment</title>
+</head>
+<body>
+    <header class="cen">
+        <h1>Sandy and Leslie's Apartment</h1>
+    </header>
+    <div class="cen1">
+        <p>Click a room for detailed view </p>
+        <img src="images/apartmentfloorplan.jpg" alt="Floor_Plan" usemap="#image-map">
+        <map name="image-map">
+            <area href="livingroom.html" coords="196,104,350,284"  shape="rect" alt="livingroom">
+            <area href="bedroom.html" coords="390,108,557,106,580,313,503,308,491,240,392,236" shape="poly" alt="bedroom">
+            <area href="bedroom.html" coords="47,100,186,284" shape="rect" alt="bedroom">
+            <area href="kitchen.html" coords="188,287,291,390" shape="rect" alt="kitchen">
+            <area href="dinigroom.html" coords="348,339,53" shape="circle" alt="dinig">
+        </map>
+    </div>
+    <nav class="cen">
+        <ul>
+            <li id="licie"><a href="apartment.html">Apartment</a></li>
+            <li><a href="bedroom.html">Bedroom 1</a></li>
+            <li><a href="bedroom.html">Bedroom 2</a></li>
+            <li><a href="dinigroom.html">Dining Room</a></li>
+            <li><a href="kitchen.html">Kitchen</a></li>
+            <li><a href="livingroom.html">Living Room</a></li>
+        </ul>
+    </nav>
+    <div class="genralcls">
+        <div class="cent"><h1>Diningroom Detial</h1></div>
+        <div class="cent">
+            <img src="images/diningroom_lg.jpg" alt="Dining_image">
+        </div>
+        <div>
+            <h1>Apartment Services:</h1>
+            <table>
+                <tr>
+                    <th>Services</th>
+                    <th>Day/Hours</th>
+                </tr>
+                <tr>
+                    <td>Gym</td>
+                    <td rowspan="2">Monday-Friday 6am - 10pm <br>Saturday 8am - 8pm <br>Sunday 8am - 5 pm</td>
+                </tr>
+                <tr>
+                    <td>Pool</td>
+                </tr>
+                <tr>
+                    <td>Laundry</td>
+                    <td>24/7</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="lascl">Please do not allow people you do not know to use these facilities.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <div><p>For more information contact: <a href="mailto:sandyandleslie@example.com">SandyAndLeslie@example.com </a> or <a href="tel:+19055551234">(905) 555-1234</a></p></div>
+        <div><p>&copy; Sandy and Leslie 2022</p></div>
+    </footer>
+</body>
+</html>
