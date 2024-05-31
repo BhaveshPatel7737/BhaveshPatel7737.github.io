@@ -41,21 +41,19 @@
             height: 100%;
             border-radius: 2rem;
         }
-        #front,
+        #front, #back{
+            position: absolute;
+            backface-visibility: hidden;
+        }
         #back {
             height: 100%;
             width: 100%;
             border-radius: 2rem;
             box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-            position: absolute;
-        }
-        #back{
             background-image: linear-gradient(to right top, #4712de, #820093, #7e0057, #640030, #41161c);
             color: white;
-            transform: scale(-1,1);
+            transform: rotateY(180deg);
         }
-        
-
     </style>
 </head>
 <body>
@@ -71,7 +69,6 @@
                     <li><a href="#projects" class="nav-link px-2 text-white">Projects</a></li>
                     <li><a href="#resume" class="nav-link px-2 text-white">Resume</a></li>
                     <li><a href="#contact" class="nav-link px-2 text-white">Contact</a></li>
-                    
                 </ul>
             </div>
         </div>
@@ -80,28 +77,26 @@
     <main class="container" style="margin-top: 10%;">
         <section id="summary" class="mb-4">
             <div class="cardcontainer">
-                <div class="card" id="card1" onmouseover="myimg()" onmouseout="myinfo()">
+                <div class="card" id="card1">
                     <div id="front">
                         <img src="/src/me.jpeg" alt="me.jpeg">
                     </div>
                     <div id="back">
                         <h1>Enthusiastic software developer eager to create meaningful projects.</h1>
-                        
                     </div>
                 </div>
             </div>
-            <p>A passionate learner with a strong background in coding, I'm an aspiring software engineer. Proficient in Python, JavaScript, HTML/CSS, and I'm excited to use these talents in practical projects, committed to producing orderly, productive code and working well in teams. Excited to work on important projects and start a fulfilling career in software development.
-            </p>
+            <p>A passionate learner with a strong background in coding, I'm an aspiring software engineer. Proficient in Python, JavaScript, HTML/CSS, and I'm excited to use these talents in practical projects, committed to producing orderly, productive code and working well in teams. Excited to work on important projects and start a fulfilling career in software development.</p>
         </section>
 
         <section id="education" class="mb-4">
             <h2>Education:</h2>
             <ul>
                 <li>
-                    <strong>Bachlore in Computer Application</strong>- BPCCS [2017-2020]
+                    <strong>Bachelor in Computer Application</strong> - BPCCS [2017-2020]
                 </li>
                 <li>
-                    <strong>Computer System Technician - Software Support</strong>- Mohawk College [2022-Present]
+                    <strong>Computer System Technician - Software Support</strong> - Mohawk College [2022-Present]
                 </li>
             </ul>
         </section>
@@ -109,8 +104,7 @@
         <section id="skills" class="mb-4">
             <h2>Skills</h2>
             <ul class="list-unstyled">
-                <li></li>
-                <li>Java, HTML, CSS, Javascript, C++ etc.</li>
+                <li>Java, HTML, CSS, JavaScript, React, C++ etc.</li>
                 <li>Teamwork, Communication Skills.</li>
             </ul>
         </section>
@@ -123,16 +117,15 @@
                         <!-- This projects are Pretended projects -->
                         <div class="card-body">
                             <h3 class="card-title">Project 1: To-Do List Web Application</h3>
-                            <p class="card-text">This is a basic online application for a to-do list using HTML, CSS, and JavaScript. Permit users to create tasks, check them off as finished, and remove them. Put basic CRUD (Create, Read, Update, Delete) capabilities into practice and concentrate on creating an intuitive and visually appealing interface. </p>
+                            <p class="card-text">The To-Do List Application is a simple, intuitive task management tool built with React and Bootstrap. This application allows users to efficiently manage their daily tasks by adding new tasks, marking tasks as completed, and removing tasks. The application features smooth transitions for adding tasks, enhancing the user experience with a polished, responsive interface.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="card-title">Project 2: Weather Forecast Web Application</h3>
-                            <p class="card-text">This app is a public API such as OpenWeatherMap to develop a web application for weather forecasting. Give customers the option to input a location (city or zip code) to get the current weather and a forecast for the days ahead. Present the atmospheric information in an understandable and visually appealing manner, ideally with temperature graphs and icons for the various weather conditions.This website is mobile device responsive design, error handling for incorrect inputs, and location-based weather retrieval into practice.
-                            </p>
+                            <h3 class="card-title">Project 2: Dice Roll Game</h3>
+                            <p class="card-text">The Dice Roll Game is a JavaFX-based application that simulates a dice rolling game where the player competes against the computer. The game provides a graphical interface to display the dice results and keeps track of the scores, including the number of wins, losses, and ties for both the player and the computer.</p>
                         </div>
                     </div>
                 </div>
@@ -159,7 +152,6 @@
                     <a href="https://github.com/BhaveshPatel7737" class="me-2"><i class="bi bi-github text-white"></i></a>
                 </div>
             </form>
-            
         </section>
     </main>
 
